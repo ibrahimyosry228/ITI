@@ -1,2 +1,2 @@
 # iti_assignments
-assignments for ITI intensive trainiing program
+assignments for ITI intensive training program
