@@ -14,10 +14,10 @@
 enum move
 {
 	STOP	      = 0,
-	FORWARD     = 1,
-	BACKWARD    = 2,
+	FORWARD       = 1,
+	BACKWARD      = 2,
 	RIGHT	      = 3,
-	LEFT        = 4
+	LEFT          = 4
 };
 
 //Right motor enable pin
@@ -182,39 +182,39 @@ void loop()
 //Motors' speed are controlled using pwm signals
 void MoveRobot (char moveCommand)
 {
-	switch (moveCommand)
-	{
-		case STOP:
-      digitalWrite(out1, LOW);
-      digitalWrite(out2, LOW);
-      digitalWrite(out3, LOW);
-      digitalWrite(out4, LOW);
-		  break;
-		case BACKWARD:
-			analogWrite(out1, pwm_R);
-      digitalWrite(out2, LOW);
-      digitalWrite(out3, LOW);
-      analogWrite(out4, pwm_L);
-  		break;
-		case FORWARD:
-			digitalWrite(out1, LOW);
-      analogWrite(out2, pwm_R);
-      analogWrite(out3, pwm_L);
-      digitalWrite(out4, LOW);
-  		break;
-		case RIGHT:
-			digitalWrite(out1, LOW);
-      digitalWrite(out2, LOW);
-      analogWrite(out3, pwm_L);
-      digitalWrite(out4, LOW);
-      flag++;
-  		break;
-		case LEFT:
-			digitalWrite(out1, LOW);
-      analogWrite(out2, pwm_R);
-      digitalWrite(out3, LOW);
-      digitalWrite(out4, LOW);
-      flag = 0;
-  		break;
-	}
+  switch (moveCommand)
+  {
+  case STOP:
+    digitalWrite(out1, LOW);
+    digitalWrite(out2, LOW);
+    digitalWrite(out3, LOW);
+    digitalWrite(out4, LOW);
+    break;
+	case BACKWARD:
+		analogWrite(out1, pwm_R);
+    digitalWrite(out2, LOW);
+    digitalWrite(out3, LOW);
+    analogWrite(out4, pwm_L);
+	  break;
+	case FORWARD:
+		digitalWrite(out1, LOW);
+    analogWrite(out2, pwm_R);
+    analogWrite(out3, pwm_L);
+    digitalWrite(out4, LOW);
+  	break;
+	case RIGHT:
+		digitalWrite(out1, LOW);
+    digitalWrite(out2, LOW);
+    analogWrite(out3, pwm_L);
+    digitalWrite(out4, LOW);
+    flag++;
+    break;
+	case LEFT:
+		digitalWrite(out1, LOW);
+    analogWrite(out2, pwm_R);
+    digitalWrite(out3, LOW);
+    digitalWrite(out4, LOW);
+    flag = 0;
+  	break;
+  }
 }
