@@ -110,6 +110,7 @@ void loop()
   {
     MoveRobot(FORWARD);
   }
+  
   //If there is an obstacle move to the right for three times and if there is still an obstacle move to the left
   else if (flag < 3)
   {
@@ -121,6 +122,7 @@ void loop()
     delay(600);
     MoveRobot(FORWARD);
   }
+
   else
   {
     MoveRobot(STOP);
