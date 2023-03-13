@@ -1,0 +1,14 @@
+#RC car project using arduino
+
+Components:
+1- Arduino mega 2560.
+2- L298N motor driver.
+3- Three 1865 Li-ion batteries.
+4- HC-SR04 ultrasonic sensor.
+5- Two TCRT5000 IR sensors.
+6- Two dc motors.
+7- RC car chassis.
+
+The project has 2 modes:
+1- Line following Robot.
+2- Obstacle avoiding robot.
